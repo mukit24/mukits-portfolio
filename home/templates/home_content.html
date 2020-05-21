@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+    <header style="text-align: center;font-size: 1.3em;">
+        <div class="jumbotron mb-0" style="background: url('/static/images/mod-show.jpg') no-repeat center fixed; 
+        background-size: cover;min-height: 80vh;">
+            <div class="container" >
+              <h1 style="color:bisque;font-family: Verdana, Geneva, Tahoma, sans-serif;font-weight: bold;text-shadow: 2px 2px black;padding-bottom: 5px;padding-top:25vh;">Welcome To My Portfolio</h1>
+              <div class="btn-group btn-group-lg">
+                <a href="#about_sec"><button type="button" class="btn btn-success">About Me</button></a>
+                <a href="{% url 'project_index' %}"><button type="button" class="btn btn-primary">Projects</button></a>
+                <a href="{% url 'blog_index' %}"><button type="button" class="btn btn-warning">Blog</button>
+                </div></a>     
+            </div>
+          </div>
+    </header>
+    <div class="about" style="padding: 20px;background-color: lightslategrey ;border-bottom: 3px solid darkgreen;" id="about_sec">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="card" style="margin: 15px;background-color: lightskyblue;">
+                <img class="card-img-top" src="/static/images/me.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">Mukit Hasan Pranto</h4>
+                  <p class="card-text">A Full Stack Developer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 desc" style="text-align: center;font-size: 1.2em;">
+              <h1
+                style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;padding-top: 8px;" >
+                About Me</h1>
+              <br>
+              <h3>Full Name: Mukit Hasan Pranto</h3>
+              <p style="line-height: 2.5rem;font-weight: 700;text-align: center;">
+                  Date Of Birth: 18 October,1998
+                  <br>
+                  Education: CSE,Khulna University
+                  <br>
+                  Skills: Full Stack Development
+                  <br>
+                  Languages: C, C++, Java, Php, Python, JavaScript
+                  <br>
+                  Tools: Bootstrap, Laravel, Django, React JS, GSAP
+            </p>
+            <h3 style="text-align: center;color: darkblue;font-weight: bold;">Contact With Me?</h3>
+            <a href="#contact_sec"><button type="button" class="btn btn-danger">Click Here</button></a>
+            </div>
+          </div>
+    </div>
+    <div style="padding: 20px;background-color: cornsilk;">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="card" style="margin: 15px;box-shadow: 10px 10px 5px grey;background-color: black;color: whitesmoke;text-align: center;">
+                <img class="card-img-top" src="/static/images/project.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">Projects</h4>
+                  <p class="card-text">There are fews projects..If you want to see them then go to the projects section by clicking below</p>
+                  <a href="{% url 'project_index' %}"><button type="button" style="width: 100%;" class="btn btn-primary">Projects</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 desc">
+                <div class="card" style="margin: 15px;box-shadow: 10px 10px 5px grey;background-color: black;color: whitesmoke;text-align: center;">
+                    <img class="card-img-top" src="/static/images/blog.png" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Blog</h4>
+                      <p class="card-text">Here you can find some articles..Hope they will help you...To see them just Clicking Below</p>
+                      <a href="{% url 'blog_index' %}"><button type="button" style="width: 100%;" class="btn btn-primary">Blog</button></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+{% endblock %}
